@@ -67,7 +67,7 @@ func (this *User) DoMessage(msg string) {
 			this.SendMsg(onlineMsg)
 		}
 		this.server.mapLock.Unlock()
-	} else if len(msg) > 7 && msg[:7] == "rename" {
+	} else if len(msg) > 7 && msg[:7] == "rename|" {
 		// 消息格式: rename|张三
 		newName := strings.Split(msg, "|")[1]
 
